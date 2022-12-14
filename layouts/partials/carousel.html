@@ -1,0 +1,67 @@
+{{ $pages := ( where site.RegularPages "Section" "posts" | first 3 ) }}
+
+<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        {{ with index $pages 0 }}
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" aria-label="Slide {{ .Title }}" class="active" aria-current="true"></button>
+        {{ end }}
+        {{ with index $pages 1 }}
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide {{ .Title }}"></button>
+        {{ end }}
+        {{ with index $pages 2 }}
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide {{ .Title }}"></button>
+        {{ end }}
+    </div>
+    <div class="carousel-inner rounded">
+        {{ with index $pages 0 }}
+        <a href="{{ .RelPermalink }}">
+            <div class="carousel-item active">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Example headline.</h1>
+                        {{ partial "cover" . }}
+                        <p>{{ .Title }}</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        {{ end }}
+
+        {{ with index $pages 1 }}
+        <a href="{{ .RelPermalink }}">
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Example headline.</h1>
+                        {{ partial "cover" . }}
+                        <p>{{ .Title }}</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        {{ end}}
+
+        {{ with index $pages 2 }}
+        <a href="{{ .RelPermalink }}">
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Example headline.</h1>
+                        {{ partial "cover" . }}
+                        <p>{{ .Title }}</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        {{ end }}
+
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <i icon-name="chevron-left" class="carousel-icons" aria-hidden="true"></i>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <i icon-name="chevron-right" class="carousel-icons" aria-hidden="true"></i>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>

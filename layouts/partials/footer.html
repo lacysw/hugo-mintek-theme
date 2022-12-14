@@ -1,0 +1,30 @@
+<footer class="footer p-3 text-center bg-light">
+    <span class="px-2">
+        <i icon-name="copyright" class="inline-icons"></i>
+        {{ now.Year }} {{ if .Site.Params.author }}{{ .Site.Params.author }}{{ end }}
+    </span>
+    {{ if .Site.Params.license }}
+    <span class="px-2">
+        <a href="{{ $.Site.Params.licenseLink }}" target="_blank" rel="noopener noreferrer">
+            <i icon-name="scale" class="inline-icons"></i>
+            <span class="text-decoration-underline">{{ .Site.Params.license }}</span>
+        </a>
+    </span>
+    {{ end }}
+    {{ if .Site.Params.showLastBuilt }}
+    <span class="px-2">
+        <i icon-name="cog" class="inline-icons"></i>
+        <span>Last Built {{ now.Format "2006-01-02" }}</span>
+    </span>
+    {{ end }}
+    {{ if .Site.Params.attributionPage }}
+    <a class="px-2" href="{{ $.Site.Params.attributionPage }}" target="_blank" rel="noopener noreferrer">
+        <i icon-name="library" class="inline-icons"></i>
+        <span class="text-decoration-underline">Attribution</span>
+    </a>
+    {{ end }}
+    <a class="px-2" href="https://github.com/lacysw/hugo-mintek-theme" target="_blank" rel="noopener noreferrer">
+        <i icon-name="palette" class="inline-icons"></i>
+        <span class="text-decoration-underline">Mintek Theme by Sid</span>
+    </a>
+</footer>

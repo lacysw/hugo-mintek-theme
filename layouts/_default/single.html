@@ -1,0 +1,10 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ partial "cover" . }}
+{{ if .Params.cover.caption }}
+<p id="cover-caption">{{ .Params.cover.caption }}</p>
+{{ end }}
+{{ partial "metadata.html" . }}
+<hr class="my-4">
+{{ .Content }}
+{{ end }}

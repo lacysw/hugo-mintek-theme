@@ -1,0 +1,148 @@
+:root {
+    --max-page-width: 1024px;
+    --std-padding-width: 12px;
+
+    --background-color: white;
+    --header-background-color: white;
+    --footer-background-color: gray;
+    --border-color: gray;
+    --shadow-color: black;
+    --text-color: black;
+    --inline-code-color: purple;
+    --block-code-color: yellow;
+    --theme-color: orange;
+    --hero-text-color: white;
+}
+
+.dark-mode {
+    --background-color: black;
+    --header-background-color: black;
+    --footer-background-color: gray;
+    --border-color: gray;
+    --shadow-color: white;
+    --text-color: white;
+    --inline-code-color: purple;
+    --block-code-color: yellow;
+    --theme-color: orange;
+    --hero-text-color: white;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.navbar, .form-control, .footer {
+    background-color: var(--header-background-color) !important;
+}
+
+.form-control {
+    border-color: var(--border-color);
+}
+.navbar-brand {
+    padding-top: 0;
+    margin-left: 4px;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:active {
+    outline: none !important;
+}
+
+.header-icons {
+    height: 1.15em;
+    width: 1.15em;
+}
+
+#nav-container {
+    max-width: var(--max-page-width);
+}
+
+.inline-icons {
+    height: 1em;
+    width: 1em;
+}
+
+label {
+  position: relative;
+}
+
+#cover-caption {
+    text-align: right;
+    font-style: italic;
+    font-size: smaller;
+}
+
+.toggle-btn {
+    top: 0;
+}
+
+.lucide {
+    bottom: .125em;
+    position: relative;
+}
+
+::placeholder {
+    font-style: italic;
+}
+
+/* #lightswitch {
+
+} */
+
+#content {
+    max-width: var(--max-page-width);
+}
+
+a {
+    text-decoration: none;
+    color: currentColor;
+}
+
+.text-decoration-underline {
+    text-decoration-style: dotted !important;
+}
+
+.footer, #post-metadata {
+    font-size: smaller;
+}
+
+#post-metadata {
+    font-family: monospace;
+}
+
+
+.hero-element {
+    color: var(--hero-text-color);
+    stroke: var(--hero-text-color);
+    text-shadow: 4px 4px 20px black;
+}
+
+
+#index-container {
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%); 
+}
+
+.carousel-item {
+    height: 960px;
+}
+
+.carousel-caption {
+    color: var(--text-color);
+}
+
+.carousel-icons {
+    stroke: var(--text-color);
+    height: 4em;
+    width: 4em;
+}
+
+p img {
+    max-width: 100%;
+    border-radius: var(--bs-border-radius);
+    box-shadow: 0 .125rem .25rem var(--shadow-color) !important;
+}

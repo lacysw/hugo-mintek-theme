@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html>
-    {{- partial "head.html" . -}}
-    <body>
-        {{- partial "header.html" . -}}
-        <div id="content">
-        {{- block "main" . }}{{- end }}
+<html class="h-100">
+    {{ partial "head.html" . }}
+    <body class="d-flex flex-column h-100">
+        {{ partial "nojs.html" . }}
+        {{ partial "header.html" . }}
+        <div class="m-auto p-3 w-100" id="content">
+        {{ block "main" . }}{{ end }}
         </div>
-        {{- partial "footer.html" . -}}
+        {{ partial "footer" . }}
     </body>
+    {{ partial "script" . }}
 </html>

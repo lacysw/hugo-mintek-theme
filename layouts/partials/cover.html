@@ -1,0 +1,6 @@
+{{ if .Params.cover.path }}
+<div class="mt-3" id="post-cover">
+    <img class="img-fluid rounded shadow-sm" id="cover-img" src="{{ .Params.cover.path }}" alt="{{ .Params.cover.caption | plainify }}"></img>
+</div>
+{{ .Title }}
+{{- end }}

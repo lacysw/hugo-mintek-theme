@@ -1,0 +1,12 @@
+<noscript>
+    <div class="bg-warning p-3"><span>
+        <b>Hey!</b> JavaScript is disabled in your browser. Just so you know, some functions of this site will not work without JavaScript. Please consider
+        <a class="text-decoration-underline" href="https://www.whatismybrowser.com/guides/how-to-enable-javascript">enabling JavaScript</a>
+        to restore intended functionality.
+        {{ if .Site.Params.repoLink }}
+        Did you intentionally disable JavaScript due to security concerns? Please feel free to
+        <a class="text-decoration-underline" href="{{ .Site.Params.repoLink }}">audit this site's source code</a>
+        to put your mind at ease.
+        {{ end }}
+    </span></div>
+</noscript>

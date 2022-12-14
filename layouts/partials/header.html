@@ -1,0 +1,29 @@
+<nav class="navbar sticky-top navbar-expand-md bg-light shadow-sm">
+    <div class="container-fluid" id="nav-container">
+        <a class="navbar-brand" href="/"><img src="{{ .Site.Params.logoPath }}" alt="Logo" height="20"></img></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggle" aria-controls="navbar-toggle" aria-expanded="false" aria-label="Toggle navigation">
+            <i icon-name="menu" class="header-icons toggle-btn"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-toggle">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                {{ range .Site.Menus.header }}
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{ .URL }}">
+                        {{ if .Pre }}
+                        {{ printf "<i icon-name=\"%s\" class=\"header-icons\"></i> " .Pre | safeHTML }}
+                        {{ end }}
+                        {{ print .Name | safeHTML }}
+                    </a>
+                </li>
+                {{ end }}
+            </ul>
+            <a class="nav-link active mb-3 mb-md-0 px-md-2 lightswitch" role="button" aria-current="page">
+                <i icon-name="sun-moon" class="header-icons"></i>
+                <span class="d-md-none">Toggle theme</span>
+            </a>
+            <form class="d-flex" id="search-bar" role="search">
+                <input class="form-control me-1" type="search" placeholder="What are you looking for?" aria-label="Search">
+            </form>
+        </div>
+    </div>
+</nav>
